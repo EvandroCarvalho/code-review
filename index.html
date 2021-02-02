@@ -1,40 +1,142 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+	<title>Code Review</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section class="page-title">
+				<img src="img/code-review-funny.gif" alt="" height="500px" width="600px">
+			</section>
+			<section class="fragment">
+				<p>Se uma nova feature quebra em produção, de quem é a culpa?</p>
+				<p class="fragment fade-in">todo o time!</p>
+			</section>
+			<!--		<section>
+				<div style="text-align: left;">
+					<p>Softwares complexos são desenvolvidos, por times. </p>
+					<p>Investir na qualidade da equipe.</p>
+					<p>Muito mais que simplesmente agrupar profissionais talentosos.</p>
+				</div>
+			</section>
+			<section>
+				<p>O atraso dessa percepção pode criar ambientes desfavoráveis ao desenvolvimento de software de qualidade</p>
+				<p>As consequências são nefastas: deadlines perdidos, projetos de péssima manutenibilidade, 
+					elevados gastos de tempo e dinheiro em correções de falhas… caos. E uma vez que estamos no caos, nossa primeira reação, 
+					quase instintiva, é a de estancar a sangria. Na prática, isso geralmente significa criar processos e métricas de controle sem fim.</p>
+			</section> -->
+			<section>
+				<p>Prática de revisão de código é muito utilizada em projetos open source</p>
+				<p>Consiste em um alguns membros da equipe de desenvolvimento, revisarem o código do colega antes de
+					integrar ao <em>code base</em></p>
+			</section>
+			<section>
+				<p>Desafios para quem abre o <em>merge request</em></p>
+				<ul>
+					<li>Vencer o sentimento paternalista</li>
+					<li>Incorporar como um cultura do time</li>
+					<li>Explicar o que foi feito de forma clara</li>
+					<li>Executar as validação e verificação automatizadas (styleguide, lints)</li>
+				</ul>
+			</section>
+			<section>
+				<p>Desafios para quem realiza o code review</p>
+				<ul>
+					<li>Separar o que é verdade do que é opnião, se é fato compartilhe a fonte</li>
+					<li>Evite falar isso é certo ou errado</li>
+					<li>Aprovação sem total entendimento</li>
+					<li>Cuidado com <em>nitpicks</em></li>
+					<li>Code review feito de forma rasa, ignorando o seu real valor</li>
+					<li>Comunicação construtiva, ter empatia</li>
+				</ul>
+			</section>
+			<section>
+				<p>Valor de um <em>code review</em></p>
+				<ul>
+					<li>Compartilhamento de conhecimento</li>
+					<li>Criação de soluções alternativas</li>
+					<li>Aumento do senso de equipe</li>
+					<li>Melhoria continua</li>
+					<li>Entendimento de como as <em>features</em> foram implementadas</li>
+					<li>Importância de ver requisitos funcionado ao invés de cards no jira</li>
+					<li>Descentralização do conhecimento, evitando filas individuais</li>
+				</ul>
+			</section>
+			<section>
+				<p>Seguestões</p>
+				<ul>
+					<li>Automatizações</li>
+					<li>Documentações</li>
+					<li>Padronize</li>
+				</ul>
+			</section>
+			<section>
+				<p>Algumas boas práticas</p>
+				<ul>
+					<li>Evite mapeamentos mentais ex.: a1, a2, ...</li>
+					<li>Convenção de nomes</li>
+					<li>Classes geramente são substrantivos</li>
+					<li>Pequenas, ter uma única resposabilidade</li>
+					<li>Métodos devem ser verbos</li>
+					<li>Pequenos</li>
+					<li>Nível de identação não deve ser maior que 2</li>
+					<li>Poucos parâmetros, máximo 3</li>
+					<li>Sempre lance exceções ao retornar um erro para o usuário</li>
+					<li>Forneça exceções de contexto</li>
+					<li>Não retorne e não passe null</li>
+					<li>Teste (F.I.R.S.T.)</li>
+				</ul>
+			</section>
+			<section>
+				<p>Referências</p>
+				<a
+					href="https://medium.com/trainingcenter/qual-o-real-valor-do-code-review-para-uma-equipe-de-desenvolvimento-f43f894c0a04#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjAzYjJkMjJjMmZlY2Y4NzNlZDE5ZTViOGNmNzA0YWZiN2UyZWQ0YmUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYmYiOjE2MTIxNDcyNDEsImF1ZCI6IjIxNjI5NjAzNTgzNC1rMWs2cWUwNjBzMnRwMmEyamFtNGxqZGNtczAwc3R0Zy5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExNzQwMzA3NDY5NzQyMTMyMDcxOCIsImVtYWlsIjoiZXZhbmRyb3ZqdW5pb3JAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF6cCI6IjIxNjI5NjAzNTgzNC1rMWs2cWUwNjBzMnRwMmEyamFtNGxqZGNtczAwc3R0Zy5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsIm5hbWUiOiJFdmFuZHJvIEp1bmlvciIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHZ1h3MlNGeHpiQ2VLSk1YbVhSUy1tUFZCTmtVcWJoSEI3djM5Vnl2Zz1zOTYtYyIsImdpdmVuX25hbWUiOiJFdmFuZHJvIiwiZmFtaWx5X25hbWUiOiJKdW5pb3IiLCJpYXQiOjE2MTIxNDc1NDEsImV4cCI6MTYxMjE1MTE0MSwianRpIjoiZjQxMjdlN2RiYzgzZDk3ZDQ3OTljNzU3MDJiZGYzOTZmNzIyMzk2NSJ9.lE6fpble7s8vA2v9MaO0jtkCuF7seO8r9a59xzHJeO6fSxJfJZnIqxI-wxEd8xyfpWu7wyBLarzl9LmFXLTHZ1amtoZr7lFNXmpngyH966MUbLVFd9xfxIJXl_lRdCHgWU2GQhFtbEKy41AeBoYanuWBkwe09ZAFipgZXNJnPHFdUBJYZEDtxR5ZrPrwdyYIDXvFncyg1A60rLXpcCu32pVsfqOeMKKWiZA-u7Gj6gstSFvhaf30NSzBfX9byOlNvmuZbOnWxtcliwfiyBviBSMD3Utu6FJCkrp-J5qHc9mLv3RFFTLoZsm0WHsPRoBfTe-CGhw0hRsOraB_-Y3GXg">Qual
+					o real valor do code review para uma equipe de desenvolvimento?</a>
+				</br>
+				<a href="https://google.github.io/eng-practices/review/reviewer/comments.html">Como escrever comentários
+					de revisão de código</a>
+				</br>
+				<a
+					href="https://www.amazon.com.br/C%C3%B3digo-limpo-Robert-C-Martin/dp/8576082675/ref=asc_df_8576082675/?tag=googleshopp00-20&linkCode=df0&hvadid=379792215563&hvpos=&hvnetw=g&hvrand=11536203390865228384&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001590&hvtargid=pla-398225630878&psc=1">Clean
+					Code</a>
+				</br>
+				<a
+					href="https://www.amazon.com.br/Refatora%C3%A7%C3%A3o-Aperfei%C3%A7oando-design-c%C3%B3digos-existentes-ebook/dp/B087N8LKYB/ref=asc_df_B087N8LKYB/?tag=googleshopp00-20&linkCode=df0&hvadid=379713206559&hvpos=&hvnetw=g&hvrand=11336150133543823381&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001590&hvtargid=pla-903091061507&psc=1">Refactoring</a>
+				</br>
+				<a href="https://medium.com/@ericabertan/5-dicas-para-fazer-um-bom-code-review-2ac135b0233c">5 dicas
+					para fazer um bom Code Review</a>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
