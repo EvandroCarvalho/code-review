@@ -9,7 +9,7 @@
 
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
-	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+	<link rel="stylesheet" href="dist/theme/simple.css" id="theme">
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
@@ -21,12 +21,18 @@
 			<section class="page-title">
 				<img src="img/code-review-funny.gif" alt="" height="500px" width="600px">
 			</section>
+			<section>
+				<img src="img/clean-code.PNG" height="700px" width="800px">
+			</section>
+			<section>
+				<img src="img/tempoxprodutividade.PNG" height="450px" width="1000px">
+			</section>
 			<section class="fragment">
 				<p>Se uma nova feature quebra em produção, de quem é a culpa?</p>
-				<p class="fragment fade-in">todo o time!</p>
+				<p class="fragment fade-in">De todo o time.</p>
 			</section>
-			<!--		<section>
-				<div style="text-align: left;">
+			<section>
+				<div>
 					<p>Softwares complexos são desenvolvidos, por times. </p>
 					<p>Investir na qualidade da equipe.</p>
 					<p>Muito mais que simplesmente agrupar profissionais talentosos.</p>
@@ -34,71 +40,109 @@
 			</section>
 			<section>
 				<p>O atraso dessa percepção pode criar ambientes desfavoráveis ao desenvolvimento de software de qualidade</p>
-				<p>As consequências são nefastas: deadlines perdidos, projetos de péssima manutenibilidade, 
-					elevados gastos de tempo e dinheiro em correções de falhas… caos. E uma vez que estamos no caos, nossa primeira reação, 
-					quase instintiva, é a de estancar a sangria. Na prática, isso geralmente significa criar processos e métricas de controle sem fim.</p>
-			</section> -->
+			</section>
 			<section>
-				<p>Prática de revisão de código é muito utilizada em projetos open source</p>
-				<p>Consiste em um alguns membros da equipe de desenvolvimento, revisarem o código do colega antes de
-					integrar ao <em>code base</em></p>
+				<p>Consequências</p>
+				<ul>
+					<li>
+						<p>Deadlines perdidos.</p>
+					</li>
+					<li>
+						<p>Projetos de péssima manutenibilidade.</p>
+					</li>
+					<li>
+						<p>Elevados gastos de tempo e dinheiro em correções de falhas.</p>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<p>Primeiras reações</p>
+				<p>Criar processos e métricas de controle sem fim.</p>
+			</section>
+			<section>
+				<p class="page-title">Code Review</p>
+				<p>Prática de revisão de código é muito utilizada em projetos open source.</p>
+				<p>Consiste em um alguns membros da equipe de desenvolvimento revisarem o código do colega antes de
+					integrar ao <em>code base</em>.</p>
+			</section>
+			<section>
+				<p>Valor de um <em>code review</em></p>
+				<ul>
+					<li>Compartilhamento de conhecimento.</li>
+					<li>Criação de soluções alternativas.</li>
+					<li>Aumento do senso de equipe.</li>
+					<li>Melhoria continua.</li>
+					<li>Entendimento de como as <em>features</em> foram implementadas.</li>
+					<li>Importância de ver requisitos funcionado ao invés de cards no jira.</li>
+					<li>Descentralização do conhecimento, evitando filas individuais.</li>
+				</ul>
 			</section>
 			<section>
 				<p>Desafios para quem abre o <em>merge request</em></p>
 				<ul>
-					<li>Vencer o sentimento paternalista</li>
-					<li>Incorporar como um cultura do time</li>
-					<li>Explicar o que foi feito de forma clara</li>
-					<li>Executar as validação e verificação automatizadas (styleguide, lints)</li>
+					<li>Vencer o sentimento paternalista.</li>
+					<li>Explicar o que foi feito de forma clara.</li>
+					<li>Executar as validação e verificação automatizadas (styleguide, lints).</li>
+					<li>Estar seguro do que foi desenvolvido.</li>
+					<li>Ter boas refêrencias.</li>
+					<li>Incorporar como uma cultura do time.</li>
 				</ul>
 			</section>
 			<section>
 				<p>Desafios para quem realiza o code review</p>
 				<ul>
-					<li>Separar o que é verdade do que é opnião, se é fato compartilhe a fonte</li>
-					<li>Evite falar isso é certo ou errado</li>
-					<li>Aprovação sem total entendimento</li>
-					<li>Cuidado com <em>nitpicks</em></li>
-					<li>Code review feito de forma rasa, ignorando o seu real valor</li>
-					<li>Comunicação construtiva, ter empatia</li>
+					<li>Separar o que é verdade do que é opnião, se é fato compartilhe a fonte.</li>
+					<li>Evite falar isso é certo ou errado.</li>
+					<li>Aprovação sem total entendimento.</li>
+					<li>Cuidado com <em>nitpicks.</em></li>
+					<li>Code review feito de forma rasa, ignorando o seu real valor.</li>
+					<li>Comunicação construtiva, ter empatia.</li>
 				</ul>
 			</section>
 			<section>
-				<p>Valor de um <em>code review</em></p>
-				<ul>
-					<li>Compartilhamento de conhecimento</li>
-					<li>Criação de soluções alternativas</li>
-					<li>Aumento do senso de equipe</li>
-					<li>Melhoria continua</li>
-					<li>Entendimento de como as <em>features</em> foram implementadas</li>
-					<li>Importância de ver requisitos funcionado ao invés de cards no jira</li>
-					<li>Descentralização do conhecimento, evitando filas individuais</li>
-				</ul>
-			</section>
-			<section>
-				<p>Seguestões</p>
+				<p>Sugestões</p>
 				<ul>
 					<li>Automatizações</li>
 					<li>Documentações</li>
-					<li>Padronize</li>
+					<li>Padronizações</li>
 				</ul>
 			</section>
 			<section>
 				<p>Algumas boas práticas</p>
 				<ul>
 					<li>Evite mapeamentos mentais ex.: a1, a2, ...</li>
-					<li>Convenção de nomes</li>
-					<li>Classes geramente são substrantivos</li>
-					<li>Pequenas, ter uma única resposabilidade</li>
-					<li>Métodos devem ser verbos</li>
-					<li>Pequenos</li>
-					<li>Nível de identação não deve ser maior que 2</li>
-					<li>Poucos parâmetros, máximo 3</li>
-					<li>Sempre lance exceções ao retornar um erro para o usuário</li>
-					<li>Forneça exceções de contexto</li>
-					<li>Não retorne e não passe null</li>
-					<li>Teste (F.I.R.S.T.)</li>
+					<li>Convenção de nomes.</li>
+					<li>Classes geramente são substrantivos.</li>
+					<li>Pequenas, ter uma única resposabilidade.</li>
+					<li>Métodos devem ser verbos.</li>
+					<li>Pequenos.</li>
+					<li>Nível de identação não deve ser maior que 2.</li>
+					<li>Poucos parâmetros, máximo 3.</li>
+					<li>Sempre lance exceções ao retornar um erro para o usuário.</li>
+					<li>Forneça exceções de contexto.</li>
+					<li>Não retorne e não passe null.</li>
+					<li>Teste (F.I.R.S.T.).</li>
 				</ul>
+			</section>
+			<section data-background=https://media.giphy.com/media/YTFHYijkKsXjW/giphy.gif>
+			</section>
+			<section>
+				<p style="align-items: center; justify-content: center; display: flex">
+					<img src="img/gmail.png" alt="gmail" height="40" width="40"
+						style="border: none !important; box-shadow: none !important; margin-right: 10px">
+					evandro.junior@zup.com.br
+				</p>
+				<p style="align-items: center; justify-content: center; display: flex">
+					<img src="img/linkedin.png" height="40" width="40"
+						style="border: none !important; box-shadow: none !important; margin-right: 10px">
+					evandrovcj
+				</p>
+				<p style="align-items: center; justify-content: center; display: flex">
+					<img src="img/twitter.png" height="40" width="40"
+						style="border: none !important; box-shadow: none !important; margin-right: 10px">
+					@CarvEvandro
+				</p>
+				<h3 style="color:#043dab">Perguntas?</h3>
 			</section>
 			<section>
 				<p>Referências</p>
